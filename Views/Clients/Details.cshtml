@@ -1,0 +1,31 @@
+@model Client
+@{
+    ViewData["Title"] = "Détail client";
+}
+<div class="card shadow-sm">
+    <div class="card-header bg-info text-white"><i class="bi bi-person"></i> Détail du client</div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">N°</dt>
+            <dd class="col-sm-9">@Model.Id</dd>
+            <dt class="col-sm-3">Nom</dt>
+            <dd class="col-sm-9">@Model.Nom</dd>
+            <dt class="col-sm-3">Prénom</dt>
+            <dd class="col-sm-9">@Model.Prenom</dd>
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+            <dt class="col-sm-3">Téléphone</dt>
+            <dd class="col-sm-9">@Model.Telephone</dd>
+            <dt class="col-sm-3">Ville</dt>
+            <dd class="col-sm-9">@Model.Ville</dd>
+            <dt class="col-sm-3">Âge</dt>
+            <dd class="col-sm-9">@Model.Age ans</dd>
+            <dt class="col-sm-3">Date d'inscription</dt>
+            <dd class="col-sm-9">@Model.DateInscription.ToString("dd/MM/yyyy")</dd>
+        </dl>
+    </div>
+    <div class="card-footer">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="bi bi-pencil"></i> Modifier</a>
+        <a asp-action="Index" class="btn btn-secondary">Retour</a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+@model Client
+@{
+    ViewData["Title"] = "Nouveau client";
+}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-danger text-white"><i class="bi bi-person-plus"></i> Nouveau client</div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <partial name="_Form" model="Model" />
+                    <button type="submit" class="btn btn-danger"><i class="bi bi-save"></i> Enregistrer</button>
+                    <a asp-action="Index" class="btn btn-secondary">Retour</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

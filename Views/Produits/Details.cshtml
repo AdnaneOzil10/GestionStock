@@ -1,0 +1,25 @@
+@model Produit
+@{
+    ViewData["Title"] = "Détail produit";
+}
+<div class="card shadow-sm">
+    <div class="card-header bg-info text-white"><i class="bi bi-eye"></i> Détail du produit</div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Nom</dt>
+            <dd class="col-sm-9">@Model.Nom</dd>
+            <dt class="col-sm-3">Catégorie</dt>
+            <dd class="col-sm-9">@Model.Categorie?.Nom</dd>
+            <dt class="col-sm-3">Prix</dt>
+            <dd class="col-sm-9">@Model.Prix.ToString("N2") DH</dd>
+            <dt class="col-sm-3">Quantité</dt>
+            <dd class="col-sm-9">@Model.Quantite</dd>
+            <dt class="col-sm-3">Date d'ajout</dt>
+            <dd class="col-sm-9">@Model.DateAjout.ToString("dd/MM/yyyy")</dd>
+        </dl>
+    </div>
+    <div class="card-footer">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="bi bi-pencil"></i> Modifier</a>
+        <a asp-action="Index" class="btn btn-secondary">Retour</a>
+    </div>
+</div>

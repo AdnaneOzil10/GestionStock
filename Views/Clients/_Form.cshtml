@@ -1,0 +1,43 @@
+@model Client
+<div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label asp-for="Nom" class="form-label"></label>
+        <input asp-for="Nom" class="form-control" />
+        <span asp-validation-for="Nom"></span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label asp-for="Prenom" class="form-label"></label>
+        <input asp-for="Prenom" class="form-control" />
+        <span asp-validation-for="Prenom"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label asp-for="Telephone" class="form-label"></label>
+        <input asp-for="Telephone" class="form-control" />
+        <span asp-validation-for="Telephone"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <label asp-for="Ville" class="form-label"></label>
+        <input asp-for="Ville" class="form-control" />
+        <span asp-validation-for="Ville"></span>
+    </div>
+    <div class="col-md-4 mb-3">
+        <label asp-for="Age" class="form-label"></label>
+        <input asp-for="Age" class="form-control" min="0" max="120" />
+        <span asp-validation-for="Age"></span>
+    </div>
+    <div class="col-md-4 mb-3">
+        <label asp-for="DateInscription" class="form-label"></label>
+        <input asp-for="DateInscription" class="form-control" />
+        <span asp-validation-for="DateInscription"></span>
+    </div>
+</div>
